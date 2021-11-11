@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingTop="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_photo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/todo"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/music_photo"
+            android:background="#424242"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_music" />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/music_name"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:letterSpacing="0.02"
+        android:maxLines="1"
+        android:text="@string/peaches"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/music_artist"
+        app:layout_constraintLeft_toRightOf="@id/item_photo"
+        app:layout_constraintTop_toTopOf="@id/item_photo" />
+
+    <TextView
+        android:id="@+id/music_artist"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="@string/justin_bieber"
+        android:textColor="#CCCC"
+        app:layout_constraintBottom_toBottomOf="@id/item_photo"
+        app:layout_constraintLeft_toLeftOf="@id/music_name"
+        app:layout_constraintTop_toBottomOf="@id/music_name" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.1dp"
+        android:background="#515151"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/music_name" />
+
+    <ImageView
+        android:id="@+id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/ic_more"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

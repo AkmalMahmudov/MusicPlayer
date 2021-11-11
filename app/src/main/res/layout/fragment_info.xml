@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_margin="24dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:contentDescription="@string/todo"
+        android:focusable="true"
+        android:padding="6dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_player"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/btn_back"
+        app:layout_constraintLeft_toRightOf="@id/btn_back"
+        app:layout_constraintRight_toLeftOf="@id/btn_more"
+        app:layout_constraintTop_toTopOf="@id/btn_back" />
+
+    <ImageView
+        android:id="@+id/btn_more"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_margin="24dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:contentDescription="@string/todo"
+        android:focusable="true"
+        android:padding="6dp"
+        android:src="@drawable/ic_more"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/black"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@id/name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_back"
+        app:layout_constraintVertical_bias="0.2">
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/todo" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:ellipsize="marquee"
+        android:letterSpacing="0.02"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="@string/peaches"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/artist"
+        app:layout_constraintLeft_toLeftOf="@id/btn_back" />
+
+    <TextView
+        android:id="@+id/artist"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:ellipsize="marquee"
+        android:letterSpacing="0.02"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="@string/justin_bieber"
+        android:textColor="#AFAFAF"
+        app:layout_constraintBottom_toTopOf="@id/seekBar"
+        app:layout_constraintLeft_toLeftOf="@id/btn_back" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="36dp"
+        android:thumbTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/play_pause" />
+
+    <TextView
+        android:id="@+id/gone_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/_0_00"
+        android:textColor="#AFAFAF"
+        app:layout_constraintLeft_toLeftOf="@id/btn_back"
+        app:layout_constraintTop_toBottomOf="@id/seekBar" />
+
+    <TextView
+        android:id="@+id/full_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/_5_05"
+        android:textColor="#AFAFAF"
+        app:layout_constraintRight_toRightOf="@id/btn_more"
+        app:layout_constraintTop_toBottomOf="@id/seekBar" />
+
+    <ImageView
+        android:id="@+id/heart"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="12dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:contentDescription="@string/todo"
+        android:focusable="true"
+        android:padding="6dp"
+        android:src="@drawable/ic_like"
+        app:layout_constraintBottom_toBottomOf="@id/artist"
+        app:layout_constraintRight_toRightOf="@id/btn_more"
+        app:layout_constraintTop_toTopOf="@id/name" />
+
+    <ImageView
+        android:id="@+id/shuffle"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:contentDescription="@string/todo"
+        android:focusable="true"
+        android:padding="6dp"
+        android:src="@drawable/ic_shuffle_off"
+        app:layout_constraintBottom_toBottomOf="@id/play_pause"
+        app:layout_constraintLeft_toLeftOf="@id/btn_back"
+        app:layout_constraintTop_toTopOf="@id/play_pause" />
+
+    <ImageView
+        android:id="@+id/prev"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="24dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:contentDescription="@string/todo"
+        android:focusable="true"
+        android:src="@drawable/ic_prev"
+        app:layout_constraintBottom_toBottomOf="@id/play_pause"
+        app:layout_constraintRight_toLeftOf="@id/play_pause"
+        app:layout_constraintTop_toTopOf="@id/play_pause" />
+
+    <ImageView
+        android:id="@+id/play_pause"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="60dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:contentDescription="@string/todo"
+        android:focusable="true"
+        android:src="@drawable/ic_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/next"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="24dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:contentDescription="@string/todo"
+        android:focusable="true"
+        android:src="@drawable/ic_next"
+        app:layout_constraintBottom_toBottomOf="@id/play_pause"
+        app:layout_constraintLeft_toRightOf="@id/play_pause"
+        app:layout_constraintTop_toTopOf="@id/play_pause" />
+
+    <ImageView
+        android:id="@+id/repeat"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:contentDescription="@string/todo"
+        android:focusable="true"
+        android:padding="6dp"
+        android:src="@drawable/ic_repeat_off"
+        app:layout_constraintBottom_toBottomOf="@id/play_pause"
+        app:layout_constraintRight_toRightOf="@id/btn_more"
+        app:layout_constraintTop_toTopOf="@id/play_pause" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

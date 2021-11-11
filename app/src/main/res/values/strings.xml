@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MyPlayer</string>
+    <string name="todo">TODO</string>
+    <string name="_5_05">5:05</string>
+    <string name="_0_00">0:00</string>
+    <string name="my_player">My Player</string>
+    <string name="favourites">Favourites</string>
+    <string name="playlists">Playlists</string>
+    <string name="albums">Albums</string>
+    <string name="artists">Artists</string>
+    <string name="default_notification_channel_id">default_notification_channel_id</string>
+    <string name="songs">songs</string>
+    <string name="artist">Artist</string>
+    <string name="name">Name</string>
+    <string name="peaches">Peaches</string>
+    <string name="justin_bieber">Justin Bieber</string>
+    <string name="home">Home</string>
+    <string name="share_amp_rate"><![CDATA[Share & Rate]]></string>
+    <string name="help_amp_feedback"><![CDATA[Help & Feedback]]></string>
+    <string name="exit">Exit</string>
+</resources>

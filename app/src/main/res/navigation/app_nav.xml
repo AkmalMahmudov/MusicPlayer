@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/mainScreen">
+
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="uz.gita.demoplayer.ui.screens.PlaylistScreen"
+        android:label="MainScreen"
+        tools:layout="@layout/fragment_playlist">
+        <action
+            android:id="@+id/open_playScreen"
+            app:destination="@id/playScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/playScreen"
+        android:name="uz.gita.demoplayer.ui.screens.InfoScreen"
+        android:label="PlayScreen"
+        tools:layout="@layout/fragment_info">
+        <action
+            android:id="@+id/open_playlistScreen"
+            app:destination="@id/mainScreen" />
+
+    </fragment>
+</navigation>
